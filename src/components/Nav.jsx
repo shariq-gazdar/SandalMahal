@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import FullLogo from "../assets/FullLogo.png";
 import Menu from "../assets/menu.svg";
 
-function Nav() {
+function Nav(props) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="navBar flex justify-center shadow-lg h-fit bg-black shadow-gray-700 ">
+    <div className="navBar flex justify-center shadow-lg h-fit bg-black  rounded-b-3xl ">
       <button className="wrapper w-[60rem] flex justify-center">
         <img src={FullLogo} className="w-40 py-3" alt="Menu Logo" />
       </button>
@@ -40,7 +40,10 @@ function Nav() {
       <img
         src={Menu}
         className=" pl-11"
-        onClick={() => setShowMenu(!showMenu)}
+        onClick={() => {
+          setShowMenu(!showMenu);
+          props.change(!showMenu);
+        }}
       />
     </div>
   );

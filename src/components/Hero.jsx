@@ -1,16 +1,10 @@
 import React from "react";
-import heroVideo from "../assets/heroVideo.mp4";
+import heroBanner from "../assets/webBanner.png";
 
 function Hero() {
   return (
     <div>
-      <video
-        src={heroVideo}
-        className="w-full h-96 p-2 bg-gray-600"
-        loop
-        muted
-        autoPlay
-      ></video>
+      <img src={heroBanner} alt="" className="w-full  " />
     </div>
   );
 }
