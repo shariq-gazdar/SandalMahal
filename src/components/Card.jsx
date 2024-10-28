@@ -5,8 +5,8 @@ function Card(props) {
     <div>
       <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg max-w-sm">
         <img
-          src="https://fakeimg.pl/600x400"
-          alt="Product"
+          src="https://drive.google.com/uc?id=10DmkeBz-CrRYI8tKajkHw407wcX0kKHG/view?usp=sharing"
+          // alt="Image description"
           className="w-full h-48 object-cover rounded-md mb-4"
         />
         <h2 className="text-xl font-semibold mb-2">{props.title}</h2>
@@ -14,7 +14,7 @@ function Card(props) {
         <p className="text-gray-400 mb-4">{props.gender}.</p>
         <div className="flex flex-col">
           <div className="text-lg font-bold">Rs .{props.price}</div>
-          <button className="bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-gray-300 transition">
+          <button className="bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-yellow-500 transition">
             Add to Cart
           </button>
         </div>

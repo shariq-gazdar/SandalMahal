@@ -10,10 +10,9 @@ function App() {
     setBlur(value);
   }
   if (blur) {
-    blurClass = "blur-xl";
-    console.log("In blur");
+    blurClass = "blur-xl ";
   } else {
-    blurClass = "blur-0";
+    blurClass = "blur-0 ";
   }
   return (
     <div className="mainApp  ">

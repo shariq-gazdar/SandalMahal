@@ -23,17 +23,22 @@ function CardsContainer() {
   }, []);
 
   return (
-    <div className="flex gap-10 flex-wrap bg-black p-2 justify-center pt-5">
-      {arr.length > 0 &&
-        arr.map((item, index) => (
-          <Card
-            key={index}
-            title={item[0]}
-            impression={item[1]}
-            gender={item[2]}
-            price={item[3]}
-          />
-        ))}
+    <div className="mainProducts">
+      <h1 className="text-white bg-black p-5 px-20 font-bold text-3xl">
+        All Products :
+      </h1>
+      <div className="flex gap-10 flex-wrap bg-black p-2 justify-center pt-5">
+        {arr.length > 0 &&
+          arr.map((item, index) => (
+            <Card
+              key={index}
+              title={item[0]}
+              impression={item[1]}
+              gender={item[2]}
+              price={item[3]}
+            />
+          ))}
+      </div>
     </div>
   );
 }
