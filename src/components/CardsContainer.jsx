@@ -3,32 +3,37 @@ import Card from "../components/Card";
 
 function CardsContainer() {
   const [arr, setArr] = useState([]);
-  const getProd = () => {
+
+  const getProd = async () => {
+    // Using async/await for cleaner syntax
     let api = import.meta.env.VITE_API;
 
-    fetch(api).then((res) => {
-      res.json().then((data) => {
-        setArr(data.values);
-        console.log(data.values);
-      });
-    });
+    try {
+      const response = await fetch(api);
+      const data = await response.json();
+      setArr(data.values);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      // Handle error by displaying a message or using a fallback state
+    }
   };
 
   useEffect(() => {
     getProd();
   }, []);
+
   return (
     <div className="flex gap-10 flex-wrap bg-black p-2 justify-center pt-5">
-      {arr.map((item, index) => (
-        <Card
-          key={index}
-          title={item[0]}
-          impression={item[1]}
-          gender={item[2]}
-          price={item[3]}
-        />
-      ))}
-      <Card />
+      {arr.length > 0 &&
+        arr.map((item, index) => (
+          <Card
+            key={index}
+            title={item[0]}
+            impression={item[1]}
+            gender={item[2]}
+            price={item[3]}
+          />
+        ))}
     </div>
   );
 }
