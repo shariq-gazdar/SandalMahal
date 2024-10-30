@@ -9,6 +9,7 @@ function Card(props) {
           // alt="Image description"
           className="w-full h-48 object-cover rounded-md mb-4"
         />
+
         <h2 className="text-xl font-semibold mb-2">{props.title}</h2>
         <p className="text-gray-400 mb-4">{props.impression}.</p>
         <p className="text-gray-400 mb-4">{props.gender}.</p>
