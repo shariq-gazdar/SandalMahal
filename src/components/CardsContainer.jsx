@@ -14,8 +14,13 @@ function CardsContainer() {
       setArr(data.values);
     } catch (error) {
       console.error("Error fetching data:", error);
-      // Handle error by displaying a message or using a fallback state
     }
+  };
+  const convertToArray = (str) => {
+    return str
+      .replace(/^\[|\]$/g, "")
+      .split(",")
+      .map((item) => item.trim().replace(/['"]/g, ""));
   };
 
   useEffect(() => {
@@ -36,6 +41,7 @@ function CardsContainer() {
               impression={item[1]}
               gender={item[2]}
               price={item[3]}
+              imageArr={convertToArray(item[4])}
             />
           ))}
       </div>

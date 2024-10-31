@@ -1,14 +1,11 @@
 import React from "react";
+import ImageCarousel from "./ImageCarousel";
 
 function Card(props) {
   return (
     <div>
       <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg max-w-sm">
-        <img
-          src="https://drive.google.com/uc?id=10DmkeBz-CrRYI8tKajkHw407wcX0kKHG/view?usp=sharing"
-          // alt="Image description"
-          className="w-full h-48 object-cover rounded-md mb-4"
-        />
+        <ImageCarousel images={props.imageArr} />
 
         <h2 className="text-xl font-semibold mb-2">{props.title}</h2>
         <p className="text-gray-400 mb-4">{props.impression}.</p>
