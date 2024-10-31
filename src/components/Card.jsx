@@ -12,8 +12,8 @@ function Card(props) {
         <p className="text-gray-400 mb-4">{props.gender}.</p>
         <div className="flex flex-col">
           <div className="text-lg font-bold">Rs .{props.price}</div>
-          <button className="bg-white text-black px-4 py-2 my-2 rounded-2xl font-medium hover:bg-yellow-500 transition">
-            Add to Cart
+          <button className="bg-white text-black px-4 py-2 my-2 rounded-2xl font-medium hover:bg-yellow-500 hover:text-white transition hover:ring-2 ring-yellow-500 ">
+            Order Now!
           </button>
         </div>
       </div>
