@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import home from "../assets/home.svg";
 
 function Order() {
   const location = useLocation();
@@ -57,6 +58,9 @@ function Order() {
 
   return (
     <div className="max-w-lg mx-auto p-8 bg-gray-900 text-gray-200 shadow-lg rounded-lg">
+      <a href="/">
+        <img src={home} alt="" className="w-10 float-right" />
+      </a>
       <h1 className="text-3xl font-bold mb-4">Order Page</h1>
       <h2 className="text-xl font-semibold mb-2">Product: {title}</h2>
       <p className="text-gray-400 mb-6">{description}</p>
