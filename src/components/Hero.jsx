@@ -4,7 +4,11 @@ import heroBanner from "../assets/webBanner.png";
 function Hero() {
   return (
     <div>
-      <img src={heroBanner} alt="" className="w-full  " />
+      <img
+        src={heroBanner}
+        alt=""
+        className="w-full  lg:h-full h-52 aspect-auto "
+      />
     </div>
   );
 }

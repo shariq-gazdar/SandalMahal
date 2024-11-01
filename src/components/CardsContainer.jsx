@@ -32,7 +32,7 @@ function CardsContainer() {
       <h1 className="text-white bg-black p-5 px-20 font-bold text-3xl">
         All Products :
       </h1>
-      <div className="flex gap-10 flex-wrap bg-black p-2 justify-center pt-5">
+      <div className="flex gap-10 flex-wrap bg-black p-2 justify-center pt-5 bg-blend-overlay">
         {arr.length > 0 &&
           arr.map((item, index) => (
             <Card

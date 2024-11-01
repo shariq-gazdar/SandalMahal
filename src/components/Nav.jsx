@@ -6,13 +6,13 @@ function Nav(props) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="navBar flex justify-center shadow-lg h-fit bg-black  rounded-b-3xl h-">
+    <div className="navBar flex justify-center shadow-lg h-fit bg-black  rounded-b-3xl lg:p-0 px-10 ">
       <button className="wrapper w-[60rem] flex justify-center">
         <img src={FullLogo} className="w-40 py-3" alt="Menu Logo" />
       </button>
 
       {showMenu && (
-        <div className="menu-content text-white absolute top-16 right-0 left-[60rem] bg-gray-800 p-4 rounded shadow-lg h-dvh z-50 mr-1">
+        <div className="menu-content text-white absolute top-16 right-0 left-40  lg:left-[60rem] bg-gray-800 p-4 rounded shadow-lg h-dvh z-50 mr-1 justify-center flex ">
           <ul className="space-y-2">
             <li>
               <a href="#" className="hover:text-gray-300">
