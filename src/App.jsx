@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import CardsContainer from "./components/CardsContainer";
 import Order from "./components/Order";
+import Footer from "./components/Footer";
 
 function AppLayout({ handleBlur, blurClass }) {
   return (
@@ -12,6 +13,7 @@ function AppLayout({ handleBlur, blurClass }) {
       <div className={blurClass}>
         <Hero />
         <CardsContainer />
+        <Footer />
       </div>
     </div>
   );
