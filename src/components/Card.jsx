@@ -4,7 +4,7 @@ import ImageCarousel from "./ImageCarousel";
 function Card(props) {
   return (
     <div>
-      <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg max-w-sm">
+      <div className="bg-gray-800/90   text-white p-6 rounded-lg shadow-lg max-w-sm">
         <ImageCarousel images={props.imageArr} />
 
         <h2 className="text-xl font-semibold mb-2">{props.title}</h2>
