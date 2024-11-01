@@ -12,7 +12,12 @@ function ImageCarousel({ images }) {
       >
         {images.map((image, index) => (
           <>
-            <img key={index} src={image} alt=".../" className="w-full h-96 " />
+            <img
+              key={index}
+              src={image}
+              alt=".../"
+              className="w-full h-[22.5rem] "
+            />
           </>
         ))}
       </Carousel>

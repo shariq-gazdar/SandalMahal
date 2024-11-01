@@ -7,7 +7,7 @@ function Nav(props) {
 
   return (
     <div className="navBar flex justify-center shadow-lg h-fit bg-black  rounded-b-3xl lg:p-0 px-10 ">
-      <button className="wrapper w-[60rem] flex justify-center">
+      <button className="wrapper w-[60rem] flex justify-center ">
         <img src={FullLogo} className="w-40 py-3" alt="Menu Logo" />
       </button>
 
@@ -39,7 +39,7 @@ function Nav(props) {
       )}
       <img
         src={Menu}
-        className=" pl-11"
+        className=" mx-5 my-2 px-5 rounded-full hover:bg-yellow-400"
         onClick={() => {
           setShowMenu(!showMenu);
           props.change(!showMenu);
