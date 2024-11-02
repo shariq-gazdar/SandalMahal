@@ -57,7 +57,7 @@ function Order() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-8 bg-gray-900 text-gray-200 shadow-lg rounded-lg">
+    <div className=" mx-auto p-8 bg-gray-900 text-gray-200 shadow-lg   w-svw h-fit">
       <a href="/">
         <img src={home} alt="" className="w-10 float-right" />
       </a>
@@ -65,7 +65,7 @@ function Order() {
       <h2 className="text-xl font-semibold mb-2">Product: {title}</h2>
       <p className="text-gray-400 mb-6">{description}</p>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="w-[30rem] flex flex-col m-auto">
         <label className="block mb-2 font-medium">
           Name:
           <input
@@ -85,7 +85,6 @@ function Order() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            required
             className="w-full p-2 mt-1 bg-gray-800 border border-gray-700 rounded text-gray-200"
           />
         </label>
@@ -123,6 +122,7 @@ function Order() {
             value={formData.phone}
             onChange={handleChange}
             className="w-full p-2 mt-1 bg-gray-800 border border-gray-700 rounded text-gray-200"
+            required
           />
         </label>
 

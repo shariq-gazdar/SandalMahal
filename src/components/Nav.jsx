@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FullLogo from "../assets/FullLogo.png";
 import Menu from "../assets/menu.svg";
+import { Link } from "react-router-dom";
 
 function Nav(props) {
   const [showMenu, setShowMenu] = useState(false);
@@ -29,10 +30,8 @@ function Nav(props) {
                 Services
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">
-                Contact
-              </a>
+            <li className="hover:text-gray-300">
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import CardsContainer from "./components/CardsContainer";
 import Order from "./components/Order";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 function AppLayout({ handleBlur, blurClass }) {
   return (
@@ -35,6 +36,7 @@ function App() {
           path="/"
           element={<AppLayout handleBlur={handleBlur} blurClass={blurClass} />}
         />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

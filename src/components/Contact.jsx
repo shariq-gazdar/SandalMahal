@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import home from "../assets/home.svg";
+import Instagram from "../assets/instagram.svg";
+import Facebook from "../assets/facebook.svg";
+import Gmail from "../assets/gmail.svg";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -29,10 +33,12 @@ function Contact() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-gray-800 text-white rounded-lg shadow-lg">
+    <div className=" mx-auto p-6 bg-gray-800 text-white  shadow-lg h-svh w-screen flex flex-col items-center ">
+      <a href="/" className="self-end " title="Home">
+        <img src={home} alt="" className="w-10" />
+      </a>
       <h1 className="text-2xl font-semibold mb-4">Contact Us</h1>
-
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="w-[30rem]">
         {/* Name */}
         <label className="block mb-2 font-medium">
           Name:
@@ -79,6 +85,32 @@ function Contact() {
           Send Message
         </button>
       </form>
+      <div className="socials flex gap-x-4 mt-6">
+        <a href="">
+          <img
+            src={Instagram}
+            alt=""
+            className="w-10 bg-white rounded-full p-1"
+            title="Instagram"
+          />
+        </a>
+        <a href="">
+          <img
+            src={Facebook}
+            alt=""
+            className="w-10 bg-white rounded-full p-1"
+            title="Facebook"
+          />
+        </a>
+        <a href="">
+          <img
+            src={Gmail}
+            alt=""
+            className="w-10 bg-white rounded-full p-1"
+            title="Gmail"
+          />
+        </a>
+      </div>
     </div>
   );
 }
