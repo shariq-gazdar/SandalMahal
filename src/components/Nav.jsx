@@ -8,9 +8,12 @@ function Nav(props) {
 
   return (
     <div className="navBar flex justify-center shadow-lg h-fit bg-black  rounded-b-3xl lg:p-0 px-10 ">
-      <button className="wrapper w-[60rem] flex justify-center ">
+      <a
+        className="wrapper w-[70rem] flex justify-center cursor-pointer "
+        href="/"
+      >
         <img src={FullLogo} className="w-40 py-3" alt="Menu Logo" />
-      </button>
+      </a>
 
       {showMenu && (
         <div className="menu-content text-white absolute top-16 right-0 left-40  lg:left-[60rem] bg-gray-800 p-4 rounded shadow-lg h-dvh z-50 mr-1 justify-center flex ">
@@ -21,15 +24,11 @@ function Nav(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <Link to="/about" className="hover:text-gray-300">
                 About
-              </a>
+              </Link>
             </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">
-                Services
-              </a>
-            </li>
+
             <li className="hover:text-gray-300">
               <Link to="/contact">Contact</Link>
             </li>

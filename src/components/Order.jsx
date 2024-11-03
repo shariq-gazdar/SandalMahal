@@ -47,11 +47,11 @@ function Order() {
         "SEi6_HMvtVAUZGPxS"
       )
       .then((response) => {
-        console.log("Email sent successfully!", response.status, response.text);
+        // console.log("Email sent successfully!", response.status, response.text);
         alert("Order has been submitted successfully!");
       })
       .catch((error) => {
-        console.error("Failed to send email.", error);
+        // console.error("Failed to send email.", error);
         alert("There was an error submitting your order.");
       });
   };
@@ -89,7 +89,6 @@ function Order() {
           />
         </label>
 
-        {/* Address */}
         <label className="block mb-2 font-medium">
           Address:
           <textarea
@@ -101,7 +100,6 @@ function Order() {
           ></textarea>
         </label>
 
-        {/* Quantity */}
         <label className="block mb-2 font-medium">
           Quantity:
           <input
@@ -126,7 +124,6 @@ function Order() {
           />
         </label>
 
-        {/* Additional Notes */}
         <label className="block mb-2 font-medium">
           Additional Notes:
           <textarea
@@ -138,7 +135,6 @@ function Order() {
           ></textarea>
         </label>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="w-full bg-yellow-500 text-gray-900 py-2 mt-4 rounded hover:bg-yellow-400 transition-all font-semibold"

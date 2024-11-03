@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
+import About from "./components/About";
 import Hero from "./components/Hero";
 import CardsContainer from "./components/CardsContainer";
 import Order from "./components/Order";
@@ -37,6 +38,7 @@ function App() {
           element={<AppLayout handleBlur={handleBlur} blurClass={blurClass} />}
         />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
