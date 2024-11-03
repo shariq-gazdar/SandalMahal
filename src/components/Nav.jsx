@@ -9,7 +9,7 @@ function Nav(props) {
   return (
     <div className="navBar flex justify-center shadow-lg h-fit bg-black  rounded-b-3xl lg:p-0 px-10 ">
       <a
-        className="wrapper w-[70rem] flex justify-center cursor-pointer ml-40"
+        className="wrapper w-[70rem] flex justify-center cursor-pointer ml-10 lg:ml-40"
         href="/"
       >
         <img src={FullLogo} className="w-40 py-3" alt="Menu Logo" />
