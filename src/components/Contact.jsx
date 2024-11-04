@@ -86,7 +86,7 @@ function Contact() {
         </button>
       </form>
       <div className="socials flex gap-x-4 mt-6">
-        <a href="">
+        <a href="https://www.instagram.com/sandal_mahal.pk?igsh=Nnpiemtzam1scDMz">
           <img
             src={Instagram}
             alt=""
@@ -94,7 +94,7 @@ function Contact() {
             title="Instagram"
           />
         </a>
-        <a href="">
+        <a href="https://www.facebook.com/share/G8vUuiUZoYuR1o9q/">
           <img
             src={Facebook}
             alt=""
@@ -102,7 +102,7 @@ function Contact() {
             title="Facebook"
           />
         </a>
-        <a href="">
+        <a href="mailto:sandalmahaloffical24@gmail.com">
           <img
             src={Gmail}
             alt=""
