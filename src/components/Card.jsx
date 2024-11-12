@@ -12,6 +12,9 @@ function Card(props) {
         <p className="text-gray-400 mb-4">{props.gender}.</p>
         <div className="flex flex-col">
           <div className="text-lg font-bold">Rs .{props.price}</div>
+          <p className="text-gray-400 mb-4 line-through">
+            Rs.{props.prevPrice}
+          </p>
           <div className="hover:ring-4 my-4 ring-yellow-400 rounded-full transition-all h-fit">
             <Link
               to="/order"

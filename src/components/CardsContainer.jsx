@@ -42,6 +42,7 @@ function CardsContainer() {
               gender={item[2]}
               price={item[3]}
               imageArr={convertToArray(item[4])}
+              prevPrice={item[5]}
             />
           ))}
       </div>
