@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
+import MaleCard from "../components/MaleCard";
+import FemaleCard from "../components/FemaleCard";
+import UniSexCard from "../components/UniSexCard";
 
 function CardsContainer() {
   const [arr, setArr] = useState([]);
@@ -45,6 +48,66 @@ function CardsContainer() {
               prevPrice={item[5]}
             />
           ))}
+      </div>
+      <h1 className="text-white bg-black p-5 px-20 font-bold text-3xl">
+        Male Products :
+      </h1>
+      <div className="flex gap-10 flex-wrap bg-black p-2 justify-center pt-5 bg-blend-overlay">
+        {arr.length > 0 &&
+          arr.map(
+            (item, index) =>
+              item[2] === "Male" && (
+                <MaleCard
+                  key={index}
+                  title={item[0]}
+                  impression={item[1]}
+                  gender={item[2]}
+                  price={item[3]}
+                  imageArr={convertToArray(item[4])}
+                  prevPrice={item[5]}
+                />
+              )
+          )}
+      </div>
+      <h1 className="text-white bg-black p-5 px-20 font-bold text-3xl">
+        Female Products :
+      </h1>
+      <div className="flex gap-10 flex-wrap bg-black p-2 justify-center pt-5 bg-blend-overlay">
+        {arr.length > 0 &&
+          arr.map(
+            (item, index) =>
+              item[2] === "Female" && (
+                <FemaleCard
+                  key={index}
+                  title={item[0]}
+                  impression={item[1]}
+                  gender={item[2]}
+                  price={item[3]}
+                  imageArr={convertToArray(item[4])}
+                  prevPrice={item[5]}
+                />
+              )
+          )}
+      </div>
+      <h1 className="text-white bg-black p-5 px-20 font-bold text-3xl">
+        Unisex Products :
+      </h1>
+      <div className="flex gap-10 flex-wrap bg-black p-2 justify-center pt-5 bg-blend-overlay">
+        {arr.length > 0 &&
+          arr.map(
+            (item, index) =>
+              item[2] === "Unisex" && (
+                <UniSexCard
+                  key={index}
+                  title={item[0]}
+                  impression={item[1]}
+                  gender={item[2]}
+                  price={item[3]}
+                  imageArr={convertToArray(item[4])}
+                  prevPrice={item[5]}
+                />
+              )
+          )}
       </div>
     </div>
   );
