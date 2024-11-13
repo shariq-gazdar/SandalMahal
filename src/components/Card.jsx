@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Card(props) {
   return (
     <div>
-      <div className="bg-gray-800/90 text-white p-6 rounded-lg shadow-lg max-w-sm h-[40rem]">
+      <div className="bg-gray-800/90 text-white p-6 rounded-lg shadow-lg max-w-sm min-h-fit h-[40rem]">
         <ImageCarousel images={props.imageArr} />
         <h2 className="text-xl font-semibold mb-2">{props.title}</h2>
         <p className="text-gray-400 mb-4">{props.impression}.</p>
