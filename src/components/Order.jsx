@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import home from "../assets/home.svg";
+import Instagram from "../assets/instagram.svg";
+import Facebook from "../assets/facebook.svg";
+import Gmail from "../assets/gmail.svg";
 
 function Order() {
   const location = useLocation();
@@ -15,6 +18,7 @@ function Order() {
     quantity: 1,
     notes: "",
   });
+  const [error, setError] = useState("hidden");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,7 +45,7 @@ function Order() {
 
     emailjs
       .send(
-        "service_bblxa1s",
+        "service_z45bqhn",
         "template_xoew5zk",
         emailParams,
         "SEi6_HMvtVAUZGPxS"
@@ -53,11 +57,12 @@ function Order() {
       .catch((error) => {
         // console.error("Failed to send email.", error);
         alert("There was an error submitting your order.");
+        setError("flex flex-col w-full items-center mt-3");
       });
   };
 
   return (
-    <div className=" mx-auto p-8 bg-gray-900 text-gray-200 shadow-lg   w-svw h-fit">
+    <div className=" mx-auto p-8 bg-gray-900 text-gray-200 shadow-lg   w-svw h-screen">
       <a href="/">
         <img src={home} alt="" className="w-10 float-right" />
       </a>
@@ -65,7 +70,7 @@ function Order() {
       <h2 className="text-xl font-semibold mb-2">Product: {title}</h2>
       <p className="text-gray-400 mb-6">{description}</p>
 
-      <form onSubmit={handleSubmit} className="w-[30rem] flex flex-col m-auto">
+      <form onSubmit={handleSubmit} className=" flex flex-col m-auto w-fit">
         <label className="block mb-2 font-medium">
           Name:
           <input
@@ -137,11 +142,43 @@ function Order() {
 
         <button
           type="submit"
-          className="w-full bg-yellow-500 text-gray-900 py-2 mt-4 rounded hover:bg-yellow-400 transition-all font-semibold"
+          className="w-full bg-yellow-500 text-gray-900 py-2 mt-4 rounded hover:bg-yellow-400 transition-all font-semibold "
         >
           Submit Order
         </button>
       </form>
+      <div id="errorSection" className={error}>
+        <h1 className="text-red-500">Error while ordering?</h1>
+        <h1 className="text-red-500">
+          Don't Worry Reach out through following methods &darr;
+        </h1>
+        <div className="socials flex gap-x-4 mt-6">
+          <a href="https://www.instagram.com/sandal_mahal.pk?igsh=Nnpiemtzam1scDMz">
+            <img
+              src={Instagram}
+              alt=""
+              className="w-10 bg-white rounded-full p-1"
+              title="Instagram"
+            />
+          </a>
+          <a href="https://www.facebook.com/share/G8vUuiUZoYuR1o9q/">
+            <img
+              src={Facebook}
+              alt=""
+              className="w-10 bg-white rounded-full p-1"
+              title="Facebook"
+            />
+          </a>
+          <a href="mailto:sandalmahaloffical24@gmail.com">
+            <img
+              src={Gmail}
+              alt=""
+              className="w-10 bg-white rounded-full p-1"
+              title="Gmail"
+            />
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
